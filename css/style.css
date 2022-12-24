@@ -5,10 +5,20 @@
     box-sizing: border-box;
 }
 
+
+:root
+{
+    --padding-nav:15px;
+}
 nav
 {
  width: 100%;  
  padding: 10px 0;
+}
+
+nav
+{
+    box-shadow: 0 0 10px #ddd;
 }
 .container
 {
@@ -19,12 +29,20 @@ nav .container
 {
     display: flex;
 }
+nav ul li
+{
+    padding: var(--padding-nav);
+    position: relative;
+    overflow: hidden;
+}
 
 nav a 
 {
 
     text-decoration: none;
 }
+
+
 .logo-left
 {
     margin-right: auto;
@@ -45,12 +63,13 @@ nav a
     margin-left: auto;
     display: flex;
 }
-nav ul li
+
+.Name-Right-section li a
 {
-    padding: 15px;
-    position: relative;
-    overflow: hidden;
+    font-weight:500;
+    color: black;
 }
+
 nav .Name-Right-section li:after
 {
     content: ""; 
@@ -79,20 +98,33 @@ nav .Name-Right-section li:hover
     {
      flex-direction: column;
     }
-    .logo-left
-    {
-        margin: auto;
-    }
     .Name-Right-section
     {
         flex-direction: column;
-        margin: auto;
+        align-items: center;
         text-align: center;
+    } 
+
+    .logo-left
+    {
+        margin: 0;
+        text-align: center;
+
     }
+    .Name-Right-section
+    {
+        margin: 0;
+    }
+
+    :root
+    {
+        --padding-nav:7px;
+    }
+
 }
 
 
-@media screen and (min-width:399px) and (max-width:700px)
+@media screen and (min-width:400px) and (max-width:700px)
 {
     nav .container
     {
@@ -110,7 +142,24 @@ nav .Name-Right-section li:hover
     }
     .Name-Right-section
     {
-        margin: auto;
+        flex-direction: row;
         text-align: center;
     }
 }
+
+
+/* start of navbar */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* end of navbar */
