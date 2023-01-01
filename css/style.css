@@ -543,7 +543,42 @@ background-color: #ffffff;
  } 
 }
 
-
-
-
 /* end articles */
+
+/* start gallery */
+
+.gallery
+{
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+  position: relative;
+  background-color: var(--section-background);
+}
+.gallery .container
+{
+  display: grid;
+  grid-template-columns: repeat(auto-fill , minmax(300px,1fr));
+  gap: 40px;
+}
+
+.gallery .container .box
+{
+overflow: hidden;
+padding: 20px;
+background-color: rgb(255, 255, 255);
+}
+
+.gallery .container .box .image img
+{
+  width: 100%
+}
+.gallery .container .box:hover image
+{
+  
+}
+
+
+
+
+/* end  gallery */
+
