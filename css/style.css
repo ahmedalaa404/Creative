@@ -35,7 +35,6 @@ body {
   margin: 10px auto;
   font-size: 22px;
   z-index: 0;
-  background-color: rgb(255, 255, 255);
   transition: 0.1s border-color,0.1s color;
   transition-delay: 0.4s;
   cursor: pointer;
@@ -876,3 +875,32 @@ height: 100%;
   } 
 
 /* end of testimonials */
+
+
+.team
+{
+  background-color: white;
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+  position: relative;
+}
+
+.team .container
+{
+  display: grid;
+  grid-template-columns: repeat(auto-fill , minmax(300px,1fr));
+  gap: 40px;
+}
+.team .container .box
+{
+  position: relative;
+}
+.team .container .box .data
+{
+  display: flex;
+}
+.team .container .box img
+{
+  width: 100%;
+}
+/* start team  */
