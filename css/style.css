@@ -894,13 +894,95 @@ height: 100%;
 .team .container .box
 {
   position: relative;
+  z-index: 1;
+
 }
-.team .container .box .data
+.team .container .box::after,
+.team .container .box::before
+{
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  border-radius: 16px;
+  transition: 1s width;
+}
+.team .container .box::after
+{
+  width: 0;
+  background-color: #e4e4e4;
+  z-index: -1;
+}
+.team .container .box:hover::after
+{
+
+  width: calc(100% - 40px );
+}
+
+
+.team .container .box::before
+{
+  width: calc(100% - 40px );
+  background: #f3f3f3;
+  z-index: -2;
+}
+
+
+ .team .container .box .data
 {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
 }
-.team .container .box img
+.team .container .box .data img
 {
-  width: 100%;
+  width: calc(100% - 50px);
+  transition: 1s filter;
+  border-radius: 16px;
+} 
+.team .container .box:hover .data img
+{
+  filter: grayscale(100%);
+}
+.team .container .box .social
+{
+  margin: 23px;
+}
+.team .container .box .social a
+{
+  display: block;
+}
+.team .container .box .social i
+{
+  margin: 20px 0;
+  color: #777;
+}
+.team .container .box .social i:hover
+{
+  color:#1787e0;
+}
+
+.team .container .box .info
+{
+  padding: 10px;
+  width: calc(100% - 40px );
+  margin-left: auto;
+}
+.team .container .box .info h3
+{
+
+  margin: 10px;
+  color:var(--main-color)
+}
+
+.team .container .box:hover .info h3
+{
+  color: #7777;
+}
+.team .container .box .info p 
+{ 
+  color: #777;
 }
 /* start team  */
