@@ -135,6 +135,16 @@ animation: right-move 0.5s linear forwards;
   margin: auto;
 }
 
+@media screen and (max-width:991px) 
+{
+  .container
+  {
+    width:100%;
+    padding: 10px;
+  }
+  
+}
+
 ul {
   list-style-type: none;
   margin: 0;
@@ -1108,13 +1118,42 @@ height: 100%;
 }
 .skills .container
 {
-  padding: var(--main-padding-top);
-  display: grid;
-  grid-template-columns: repeat(auto-fill,minmax(500px,1fr)); 
+  padding-top: var(--main-padding-top);
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width:1000px)
+{
+  .skills .container
+  {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center ;
+  }
+  .skills .container .image-skills
+    {
+      width: 100% !important;
+    }
+    .skills .container .skills-rate
+    {
+      width: 100% !important;
+
+    }
+}
+.skills .container .image-skills
+{
+  width: 50%;
+}
+
+.skills .container .image-skills img  
+{
+  width: 100%;
 }
 .skills .container .skills-rate
   {
     margin-bottom: 10px;
+    width: 50%;
   }
 .skills .container .rate-text
 {
@@ -1202,16 +1241,64 @@ height: 100%;
 
 .step-works .container
 {
-  display: grid;
-  grid-template-columns: repeat(auto-fill,minmax(500px,1fr));
+  display: flex;
   padding-top: var(--main-padding-top);
   padding-bottom: var(--main-padding-bottom);
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width:991px)
+{
+  .step-works .container
+  {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .image-works
+  {
+    width: 100% !important;
+  }
+
+  .step-works .container .stepsWorks
+  {
+    width: 100% !important;
+  }
+
+  .step-works .container .steps-doing
+  {
+    flex-direction: column;
+    padding: 10px !important;
+  }
+
+  .step-works .container .steps-doing img
+  {
+    width: 40% !important;
+    margin: 20px 0;
+  }
+
+
+
 
 }
 .step-works .container .image-works
+
 {
-  width: 100%;
+  width: 50%;
 }
+
+.step-works .container .image-works img
+{
+  width: 70%;
+}
+
+.stepsWorks
+{
+  width: 50%;
+}
+
 
 .step-works .container .steps-doing
 {
