@@ -985,4 +985,85 @@ height: 100%;
 { 
   color: #777;
 }
-/* start team  */
+/* end  team  */
+
+/* start services */
+
+#services
+{
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+  background-color: var(--section-background);
+}
+#services .container
+{
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+  gap: 60px;
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+
+}
+#services .container .box
+{
+  background-color: rgb(255, 255, 255)(255, 255, 255);
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s transform;
+  counter-increment: services;
+  transition: var(--main-transition) transform;
+
+}
+#services .container .box:hover
+{
+  transform: translateY(-10px);
+}
+
+#services .container .box::before
+{
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 50%;
+  width: 10px;
+  height: 2px;
+  transform: translateX(-50%);
+  background-color: var(--main-color);
+  transition: 1s width;
+}
+#services .container .box:hover::before
+{
+  width: 100%;
+}
+
+
+#services .container .box .data-box-services
+{
+  text-align: center;
+  padding: 20px 0;
+  background: white;
+  box-shadow: 0px 0px 8px 1px #838080c7;
+}
+
+#services .container .box .data-box-services i 
+{
+  color: #797797;
+  padding: 20px ;
+  font-size: 1.6rem;
+}
+#services .container .box .data-box-services h3
+{
+  color: var(--main-color);
+}
+#services .container .box .info
+{
+  position: relative;
+  padding: 15px;
+  background-color: #f9f9f9;
+  text-align: right ;
+}
+ 
+
+
+
+/* end of services  */
