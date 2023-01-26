@@ -1631,3 +1631,62 @@ height: 100%;
     color: white;
   }
  /* end of price */
+ /* start of top video */
+.video
+{
+  padding:40px 0
+}
+
+.video .container
+{
+  display: flex;
+  justify-content: space-between;
+}
+
+.video .container .links-choose
+{
+  width: 30%;
+  border: 1px solid rgba(119, 119, 119, 0.235);;
+}
+.top-video
+{
+  display: flex;
+  justify-content: space-between;
+  padding:20px;
+  background-color: #f4f4f4;
+}
+.link-time
+{
+  padding:20px 10px;
+  border-top: 1px solid rgb(119 119 119 / 17%);;
+  cursor:pointer
+}
+.link-time p 
+{
+  color: #777;
+  padding-top:10px ;
+}
+.link-time:hover h5
+{
+  color: #1787e0;
+}
+.video-show
+{
+  background-color: #989a9b5f;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding:0  8px 10px ;
+}
+.video-show img 
+{
+
+  width: 100%;
+}
+.video-show .text-video
+{
+  background-color: white;
+  padding: 20px;
+}
+
+ /* end of video */
