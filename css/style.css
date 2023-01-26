@@ -40,6 +40,31 @@ body {
   cursor: pointer;
 }
 
+
+.points-image1
+  ,
+ .points-image2
+  {
+    width: 100px;
+    height: 100px;
+    background-image: url('../img/dots.png');
+    position: absolute;
+    z-index: 0;
+  }
+ .points-image1
+  {
+    right: 0;
+    top: 30%;
+  }
+ .points-image2
+  {
+      left: 0;  
+      bottom: 30%;
+  }
+
+
+
+
 .main-title::after , .main-title::before 
 {
 
@@ -1350,28 +1375,6 @@ height: 100%;
     padding-bottom: var(--main-padding-bottom);
     position: relative;
   }
-  .event .points-image1
-  ,
-  .event .points-image2
-  {
-    width: 100px;
-    height: 100px;
-    background-image: url('../img/dots.png');
-    position: absolute;
-
-    z-index: -1;
-  }
-  .event .points-image1
-  {
-    right: 0;
-    top: 30%;
-  }
-  .event .points-image2
-  {
-      left: 0;  
-      bottom: 30%;
-  }
-
 
   .event .container .container-dflex
   {
@@ -1519,3 +1522,18 @@ height: 100%;
 }
   
  /* end of listner */
+
+ /* start of price */
+  .price
+  {
+    padding-top: var(--main-padding-top);
+    background-color: var(--section-background);
+    padding-bottom: var(--main-padding-bottom);
+    position: relative;
+  }
+  .price .container
+  {
+    display: flex;
+  }
+
+ /* end of price */
