@@ -1642,12 +1642,30 @@ height: 100%;
   display: flex;
   justify-content: space-between;
 }
-
+@media screen and (max-width:991px)
+{
+  .video .container
+  {
+    flex-direction: column;
+    
+  }
+}
 .video .container .links-choose
 {
   width: 30%;
   border: 1px solid rgba(119, 119, 119, 0.235);;
 }
+
+@media screen and (max-width:991px)
+{
+  .video .container .links-choose
+  {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
 .top-video
 {
   display: flex;
@@ -1690,3 +1708,300 @@ height: 100%;
 }
 
  /* end of video */
+
+/* start of rate  */
+.rate 
+{
+
+  text-align: center;
+  background-color: white;
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+  position: relative;
+}
+.rate::after
+{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/stats.jpg");
+  opacity: 0.08;
+
+}
+.rate  h3 
+{
+ font-size: 2.2rem;
+ padding:30px 0;
+}
+.rate .container
+{
+  display:flex;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+
+}
+
+
+.rate .container .box
+{
+  padding: 5px;
+  width: calc(100% /4) ;
+  height: 100%;
+  text-align: center;
+}
+
+
+
+
+@media only screen and (max-width: 600px) 
+{
+  .rate .container .box
+  {
+    width: calc(100% /1) ;
+  }
+}
+
+
+@media only screen and (min-width: 600px) 
+{
+  .rate .container .box
+  {
+    width: calc(100% /2) ;
+  }
+}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) 
+{
+  .rate .container
+  {
+    justify-content: center;
+  } 
+   .rate .container .box
+  {
+    width: calc(100% /3) ;
+  }}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {  
+  .rate .container .box
+  {
+    width: calc(100% /4) ;
+  }}
+
+
+
+
+
+.rate .container .box div
+{
+  background-color: white;
+  height: 100%;
+  position: relative;
+  padding: 10px 0;
+}
+
+.rate .container .box div::after,.rate .container .box div::before
+{
+  position: absolute;
+  content: "";
+  width: 2px;
+  height: 0px;
+  background-color: var(--main-color);  
+  transition: 0.8s height ;
+}
+.rate .container .box div::after
+{
+  top: 0;
+  right: 0;
+}
+
+
+.rate .container .box div::before
+{
+  bottom: 0;
+  left: 0;
+}
+
+.rate .container .box div:hover::before , .rate .container .box div:hover::after
+{
+  height: 100%;
+}
+
+.rate .container .box div i 
+{
+  padding: 15px 0 10px 0  ;
+  font-size: 22px;
+}
+.rate .container .box div h4 
+{
+  padding: 5px 0 0  0 ;
+  font-size:2.1rem;
+}
+
+.rate .container .box div p
+{
+  color: #1787e0;
+  font-weight: 600;
+  font-size: 16px;
+  margin-top: 10px;
+}
+/*  end of rate  */
+
+
+
+
+/* start of Request   */
+.Request
+{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.Request .desc-disount
+{
+  width: 50%;
+  position: relative;
+  text-align: center;
+  padding: 40px 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: backgroundImag 10s linear infinite;
+  color: white;
+  background-size: cover;
+  background-position: 100% 100%; 
+  z-index:1;
+}
+
+@keyframes  backgroundImag 
+{
+0%
+{
+  background-image: url("../img/discount-background2.jpg");
+}
+50%
+{
+  background-image: url("../img/discount-background1.jpg");
+}
+}
+@media only screen and (max-width: 991px) 
+{
+  .Request  .desc-disount
+  {
+    width:100%;
+  }
+}
+
+.Request  .desc-disount::after
+{
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; 
+   z-index: -2;
+   background-color: var(--main-color);
+  opacity: 0.95;
+}
+.Request .desc-disount .desc
+{
+  width: 70%;
+}
+
+
+.Request .desc-disount .desc h3
+{ 
+  font-size: 1.9rem;
+  padding: 30px 0;
+}
+.Request .desc-disount .desc p
+{
+  line-height: 1.5;
+  max-width: 80%;
+  text-align: center;
+  margin: auto;
+}
+.Request .desc-disount .desc img
+{
+   width: 300px;
+   max-width: 100%;
+}
+
+.form-register-discount
+{
+  width: 50%;
+  text-align: center;
+}
+
+@media only screen and (max-width: 991px) 
+{
+  .form-register-discount
+  {
+    width:100%;
+  }
+
+
+}
+
+.form-register-discount h4
+{
+  padding:30px 0;
+  width: 40%;
+  margin: auto;
+  font-size: 1.6rem;
+}
+@media only screen and (max-width: 991px) 
+{
+  .form-register-discount h4
+  {
+    font-size: 1.1rem;
+  }
+}
+.form-register-discount .form-input
+{
+  width: 40%;
+  margin: auto;
+}
+.form-register-discount .form-input input ,.form-register-discount .form-input textarea
+{ 
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  background-color: #f9f9f9;
+}
+.form-register-discount .form-input input::placeholder
+{
+  color: #777;
+}
+.form-register-discount .form-input button
+{
+  border: none;
+  width: 100%;
+  padding: 10px;
+  color: white;
+  font-weight: 900;
+  font-size: 1.2rem;
+  background-color: #1787e0;
+  cursor: pointer;
+}
+.form-register-discount .form-input button:hover
+{
+  background-color:#1787e0;
+}
+
+ /* end of Request   */
