@@ -1735,7 +1735,7 @@ height: 100%;
  /* end of video */
 
 /* start of rate  */
-.rate 
+.rate-section
 {
 
   text-align: center;
@@ -1744,7 +1744,7 @@ height: 100%;
   padding-bottom: var(--main-padding-bottom);
   position: relative;
 }
-.rate::after
+.rate-section::after
 {
   position: absolute;
   top: 0;
@@ -1758,12 +1758,12 @@ height: 100%;
   opacity: 0.08;
 
 }
-.rate  h3 
+.rate-section  h3 
 {
  font-size: 2.2rem;
  padding:30px 0;
 }
-.rate .container
+.rate-section .container
 {
   display:flex;
   flex-wrap: wrap;
@@ -1773,7 +1773,7 @@ height: 100%;
 }
 
 
-.rate .container .box
+.rate-section .container .box
 {
   padding: 5px;
   width: calc(100% /4) ;
@@ -1786,7 +1786,7 @@ height: 100%;
 
 @media only screen and (max-width: 600px) 
 {
-  .rate .container .box
+  .rate-section .container .box
   {
     width: calc(100% /1) ;
   }
@@ -1795,7 +1795,7 @@ height: 100%;
 
 @media only screen and (min-width: 600px) 
 {
-  .rate .container .box
+  .rate-section .container .box
   {
     width: calc(100% /2) ;
   }
@@ -1805,18 +1805,18 @@ height: 100%;
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) 
 {
-  .rate .container
+  .rate-section .container
   {
     justify-content: center;
   } 
-   .rate .container .box
+   .rate-section .container .box
   {
     width: calc(100% /3) ;
   }}
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {  
-  .rate .container .box
+  .rate-section .container .box
   {
     width: calc(100% /4) ;
   }}
@@ -1825,7 +1825,7 @@ height: 100%;
 
 
 
-.rate .container .box div
+.rate-section .container .box div
 {
   background-color: white;
   height: 100%;
@@ -1833,7 +1833,7 @@ height: 100%;
   padding: 10px 0;
 }
 
-.rate .container .box div::after,.rate .container .box div::before
+.rate-section .container .box div::after,.rate-section .container .box div::before
 {
   position: absolute;
   content: "";
@@ -1842,36 +1842,36 @@ height: 100%;
   background-color: var(--main-color);  
   transition: 0.8s height ;
 }
-.rate .container .box div::after
+.rate-section .container .box div::after
 {
   top: 0;
   right: 0;
 }
 
 
-.rate .container .box div::before
+.rate-section .container .box div::before
 {
   bottom: 0;
   left: 0;
 }
 
-.rate .container .box div:hover::before , .rate .container .box div:hover::after
+.rate-section .container .box div:hover::before , .rate-section .container .box div:hover::after
 {
   height: 100%;
 }
 
-.rate .container .box div i 
+.rate-section .container .box div i 
 {
   padding: 15px 0 10px 0  ;
   font-size: 22px;
 }
-.rate .container .box div h4 
+.rate-section .container .box div h4 
 {
   padding: 5px 0 0  0 ;
   font-size:2.1rem;
 }
 
-.rate .container .box div p
+.rate-section .container .box div p
 {
   color: #1787e0;
   font-weight: 600;
