@@ -1561,7 +1561,7 @@ height: 100%;
     flex-wrap: wrap;
     position: relative;
     z-index: 2;
-
+    padding-top: 40px ;
   }
 
   .price .container .box 
@@ -1573,38 +1573,90 @@ height: 100%;
     box-shadow: 0 12px 20px 0 rgb(0 0 0 / 13%), 0 2px 4px 0 rgb(0 0 0 / 12%);
     position: relative;
     width: calc(100% / 3 - 15px);
+    z-index: 1;
+
+  }
+
+  .price .container .box:nth-child(2)
+  {
+    transform: translateY(-35px);
+  }
+
+  .price .container .box::after
+  {
+    top: 0;
+    left: 0;
+  }
+  .price .container .box::before
+  {
+
+    bottom: 0;
+    right: 0;
+
+  }
+  .price .container .box::before ,  .price .container .box::after
+  {
+    content: "" ;
+    position: absolute;
+    height: 50%;
+    width: 0%;
+    background-color: rgba(62, 60, 60, 0.092);
+    transition: 1.5s width;
+    z-index: -2;
+  }
+
+  .price .container .box:hover::before,  .price .container .box:hover::after
+  {
+    width: 100%;
   }
 
 
-
-
-
-  @media screen and (max-width:750px)
+  @media only screen and (max-width: 767px) 
   {
     .price .container
     {
       justify-content: center;
-      align-items: center;
-      gap: 40px;
+      gap: 30px;
     }
-    .price .container .box 
+    .price .container .box
     {
-      width: calc(50% - 42px ) ;
+      width: 80%;
     }
   }
 
-  @media screen and (max-width:300px)
+  @media only screen and (min-width: 768px) 
   {
     .price .container
     {
       justify-content: center;
-      align-items: center;
+      gap: 30px;
     }
-    .price .container .box 
-    {
-      width: 90% ;
-    }
+  .price .container .box
+  {
+    width:calc( 50% - 40px);
   }
+  .price .container .box:nth-child(2)
+  {
+    transform: translateY(0px);
+  }
+  }
+
+  @media only screen and (min-width: 1200px)
+
+        {
+          .price .container .box 
+          {
+            width: calc(100% / 3 - 35px);
+          }
+        
+          .price .container .box:nth-child(2)
+          {
+            transform: translateY(-35px);
+          }
+
+        }
+
+
 
 
   .price .container .box h3
