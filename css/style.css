@@ -1610,6 +1610,37 @@ height: 100%;
     width: 100%;
   }
 
+  .price .container .box .recomended
+  {
+    position: absolute;
+    writing-mode: vertical-lr;
+    padding: 35px 0px;
+    background-color: #1787e0;
+    left: 5%;
+    text-align: center;
+    width: 30px;
+    display: flex;
+    align-items: center;
+
+  }
+  .price .container .box .recomended::after
+  {
+    content:"";
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    z-index: 5;
+    border: calc(30px - 15px) solid;
+    border-color: transparent transparent white transparent;
+
+  }
+
+  .price .container .box .recomended p
+  {
+    color: white !important;
+    font-weight: bolder;
+    letter-spacing: 1.9px;
+  }
 
   @media only screen and (max-width: 767px) 
   {
